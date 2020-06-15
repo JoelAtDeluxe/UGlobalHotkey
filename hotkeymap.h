@@ -274,8 +274,8 @@ static std::unordered_map<uint32_t, uint32_t> MOD_MAP = {
 inline UKeyData QtKeyToMac(const UKeySequence &keySeq)
 {
     UKeyData data = {0, 0};
-    auto key = keySeq.GetSimpleKeys();
-    auto mods = keySeq.GetModifiers();
+    auto key = keySeq.getSimpleKeys();
+    auto mods = keySeq.getModifiers();
 
     if (key.size() == 1 && KEY_MAP.find(key[0]) != KEY_MAP.end()) {
         data.key = KEY_MAP[key[0]];

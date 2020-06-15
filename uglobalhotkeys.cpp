@@ -10,8 +10,6 @@
 #include "hotkeymap.h"
 #include "uglobalhotkeys.h"
 
-#include <QDebug>
-
 UGlobalHotkeys::UGlobalHotkeys(QWidget *parent)
     : QWidget(parent)
 {
