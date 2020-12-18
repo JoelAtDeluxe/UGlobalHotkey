@@ -10,6 +10,7 @@ This project has been forked. The original readme below details that effort. Thi
   * `GetSimpleKeys` -> `getSimpleKeys`
   * `GetModifiers` -> `getModifiers`
 * Removes qDebug notes for which keys are enabled.
+* Adds support for Qt6 (keeps Qt5 support)
 
 ## Usage
 
