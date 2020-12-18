@@ -176,7 +176,11 @@ bool UGlobalHotkeys::nativeEvent(const QByteArray &eventType,
 
 #elif defined(Q_OS_LINUX)
 
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+bool UGlobalHotkeys::nativeEventFilter(const QByteArray &eventType, void *message, qintptr *result)
+#else
 bool UGlobalHotkeys::nativeEventFilter(const QByteArray &eventType, void *message, long *result)
+#endif
 {
     Q_UNUSED(eventType);
     Q_UNUSED(result);
