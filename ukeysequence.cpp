@@ -108,7 +108,7 @@ void UKeySequence::addKey(const QString &key)
     }
 
 #if QT_VERSION < QT_VERSION_CHECK(6,0,0)
-    addKey((Qt::key) seq[0]);
+    addKey((Qt::Key) seq[0]);
 #else
     addKey(seq[0].key());
 #endif
