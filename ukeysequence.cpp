@@ -106,7 +106,12 @@ void UKeySequence::addKey(const QString &key)
         qWarning() << "Wrong key";
         return;
     }
+
+#if QT_VERSION < QT_VERSION_CHECK(6,0,0)
+    addKey((Qt::key) seq[0]);
+#else
     addKey(seq[0].key());
+#endif
 }
 
 void UKeySequence::addKey(Qt::Key key)
