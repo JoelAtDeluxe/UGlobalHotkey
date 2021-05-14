@@ -136,7 +136,7 @@ void UGlobalHotkeys::unregisterAllHotkeys()
     }
 #elif defined(Q_OS_MAC)
     for (auto ref : HotkeyRefs) {
-        this->unregisterHotKey(ref);
+        UnregisterEventHotKey(ref);
     }
 #endif
 }
