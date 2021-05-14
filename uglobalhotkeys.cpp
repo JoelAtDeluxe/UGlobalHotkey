@@ -134,6 +134,10 @@ void UGlobalHotkeys::unregisterAllHotkeys()
     foreach (const size_t id, Registered.keys()) {
         this->unregisterHotkey(id);
     }
+#elif defined(Q_OS_MAC)
+    for (auto ref : HotkeyRefs) {
+        this->unregisterHotKey(ref);
+    }
 #endif
 }
 
